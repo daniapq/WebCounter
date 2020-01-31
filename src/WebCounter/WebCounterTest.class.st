@@ -11,7 +11,7 @@ Class {
 WebCounterTest >> setUp [
 
 	super setUp.
-	counter := WebCounter new.
+	counter := Counter new.
 
 ]
 

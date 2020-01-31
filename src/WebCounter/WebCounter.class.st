@@ -8,7 +8,7 @@ Class {
 	#name : #WebCounter,
 	#superclass : #WAComponent,
 	#instVars : [
-		'count'
+		'counter'
 	],
 	#category : #'WebCounter-Components'
 }
@@ -21,37 +21,37 @@ WebCounter class >> initialize [
 
 { #category : #accessing }
 WebCounter >> count [
-	^ count
+	^ counter count
 ]
 
 { #category : #accessing }
 WebCounter >> count: anInteger [ 
-	count := anInteger
+	counter count: anInteger
 ]
 
 { #category : #actions }
 WebCounter >> decrease [
 	
-	count := count - 1
+	counter decrease
 ]
 
 { #category : #actions }
 WebCounter >> increase [
 	
-	count := count + 1
+	counter increase
 ]
 
 { #category : #initialization }
 WebCounter >> initialize [
 	
 	super initialize.
-	count := 0
+	counter := Counter new
 ]
 
 { #category : #rendering }
 WebCounter >> renderContentOn: html [
 	
-	html heading: count.
+	html heading: counter count.
 	html anchor
 		callback: [ self increase ];
 		with: '++'.
