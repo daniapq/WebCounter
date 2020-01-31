@@ -14,6 +14,7 @@ BaselineOfWebCounter >> baseline: spec [
 	spec
 		for: #common
 		do: [ 
+			"Packages"
 			spec
 				package: 'WebCounter' ]
 ]
