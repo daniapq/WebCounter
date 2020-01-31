@@ -1,0 +1,8 @@
+SmalltalkCISpec {
+  #loading : [
+    SCIMetacelloLoadSpec {
+      #baseline : 'SmallSuiteGenerator',
+      #directory : 'src',
+      #platforms : [ #pharo]
+    }
+  ]
