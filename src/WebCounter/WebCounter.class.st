@@ -20,12 +20,12 @@ WebCounter class >> initialize [
 ]
 
 { #category : #accessing }
-WebCounter >> count [
+WebCounter >> counter [
 	^ counter count
 ]
 
 { #category : #accessing }
-WebCounter >> count: anInteger [ 
+WebCounter >> counter: anInteger [ 
 	counter count: anInteger
 ]
 
@@ -51,7 +51,7 @@ WebCounter >> initialize [
 { #category : #rendering }
 WebCounter >> renderContentOn: html [
 	
-	html heading: counter count.
+	html heading: self counter.
 	html anchor
 		callback: [ self increase ];
 		with: '++'.
@@ -59,4 +59,10 @@ WebCounter >> renderContentOn: html [
 	html anchor
 		callback: [ self decrease ];
 		with: '--'
+]
+
+{ #category : #hooks }
+WebCounter >> states [
+	
+	^ Array with: self
 ]
